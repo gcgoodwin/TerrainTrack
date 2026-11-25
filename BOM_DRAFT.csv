@@ -1,13 +1,13 @@
-Part,Qty,Estimated unit price USD,Estimated total USD,Status,Phase,Specification/notes,Exact product link,Vendor,Needs verification
-ESP32-S3 camera board + PSRAM,1,17,17,To fund,Vision,Exact ESP32 board/PSRAM/lens mounting dimensions pending,https://www.amazon.com/dp/B0GLWRBPJ4,Amazon,Confirm exact PCB dimensions
-DFRobot TFS20-L LiDAR,1,44,44,To fund,Scanning,Single-point ToF; 3.3V; UART/I2C; 21x15x7.87mm,https://www.dfrobot.com/product-2951.html,DFRobot,Confirm pinout and interface
-Pan and tilt micro servos,2,5,10,To fund,Gimbal,Micro servo pair; torque and voltage TBD,https://www.amazon.com/dp/B0CNL755KP,Amazon,Confirm MG90S or actual model
-Bidirectional brushed motor driver,1,25,25,To fund,Motion,Must handle motor stall current; exact SKU TBD,,TBD,Measure motor current
-Voltage regulator + filter,1,15,15,To fund,Power,Battery 7.4V; 5V/3.3V rails; current capacities TBD,,TBD,Define simultaneous peak loads
-IMU + wheel sensing parts,1,20,20,To fund,Navigation,IMU and wheel encoders; fit and exact models TBD,,TBD,Check wheel sensor mounts
-"3D prints, hardware, connectors",1,15,15,To fund,Gimbal,"CAD-designed mount, screw fittings, wiring protection",,TBD,Measure chassis hole spacing
-Steering repair allowance,1,15,15,To fund,Motion,"Existing five-wire DC motor + potentiometer, fault not resolved",,TBD,Decide repair vs conversion
-"Chassis, drivetrain, suspension",1,,,Already owned,Existing,Reused RC chassis and tires; real acquisition cost not recorded,,Already owned,Record original cost
-Arduino Uno R3,1,,,Already owned,Control,Reused Arduino microcontroller,,Already owned,Pin allocation
-7.4V RC battery,1,,,Already owned,Power,"Existing battery; capacity, connectors TBD",,Already owned,Check battery condition
-MacBook,1,,,Already owned,Vision,MacBook performs person detection over Wi-Fi,,Already owned,Define link protocol
+Part,Qty,Estimated unit price USD,Estimated total USD,Status,Phase,Specification/notes,Exact product link,Vendor
+ESP32-S3 camera board + PSRAM,1,17,17,To fund,Vision,Exact ESP32 board/PSRAM/lens mounting dimensions pending,https://www.amazon.com/dp/B0GLWRBPJ4,Amazon
+DFRobot TFS20-L LiDAR,1,44,44,To fund,Scanning,Single-point ToF; 3.3V; UART/I2C; 21x15x7.87mm,https://www.dfrobot.com/product-2951.html,DFRobot
+Pan and tilt micro servos,2,5,10,To fund,Gimbal,Micro servo pair; torque and voltage TBD,https://www.amazon.com/dp/B0CNL755KP,Amazon
+Bidirectional brushed motor driver,1,25,25,To fund,Motion,Must handle motor stall current; exact SKU TBD,,TBD
+Voltage regulator + filter,1,15,15,To fund,Power,Battery 7.4V; 5V/3.3V rails; current capacities TBD,,TBD
+IMU + wheel sensing parts,1,20,20,To fund,Navigation,IMU and wheel encoders; fit and exact models TBD,,TBD
+"3D prints, hardware, connectors",1,15,15,To fund,Gimbal,"CAD-designed mount, screw fittings, wiring protection",,TBD
+Steering repair allowance,1,15,15,To fund,Motion,"Existing five-wire DC motor + potentiometer, fault not resolved",,TBD
+"Chassis, drivetrain, suspension",1,,,Already owned,Existing,Reused RC chassis and tires; real acquisition cost not recorded,,Already owned
+Arduino Uno R3,1,,,Already owned,Control,Reused Arduino microcontroller,,Already owned
+7.4V RC battery,1,,,Already owned,Power,"Existing battery; capacity, connectors TBD",,Already owned
+MacBook,1,,,Already owned,Vision,MacBook performs person detection over Wi-Fi,,Already owned
