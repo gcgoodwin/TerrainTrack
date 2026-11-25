@@ -1,0 +1,8 @@
+Subsystem,Board or device,Power rail,Signal or protocol,Controller pin,Device pin,Verified?,Engineering note
+Camera streaming,ESP32-S3 camera,TBD: exact board power requirements,Wi-Fi,N/A,N/A,No,Verify board variant and current requirement
+LiDAR range sensor,DFRobot TFS20-L,3.3 V regulated,UART or I2C,TBD,TBD,No,3.3 V sensor: confirm logic-level compatibility and pinout
+Pan servo,MG90S-class micro servo,5 V regulated,Servo PWM,TBD,Signal,No,Verify servo supply peak current
+Tilt servo,MG90S-class micro servo,5 V regulated,Servo PWM,TBD,Signal,No,Verify servo supply peak current
+Drive motor,Existing brushed motor,7.4 V battery through driver,PWM + direction,TBD,TBD,No,Select H-bridge based on motor current
+Steering,Original 5-wire DC motor+pot OR replacement servo,TBD,TBD,TBD,TBD,No,Choose steering architecture before firmware
+Control,Arduino Uno R3,TBD regulated rail,UART to ESP32 / PWM outputs,TBD,TBD,No,Verify 3.3V / 5V level shifting and grounds

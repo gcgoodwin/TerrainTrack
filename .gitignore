@@ -1,0 +1,22 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Local build and temporary files
+build/
+dist/
+*.tmp
+*.swp
+
+# Secrets - never commit Wi-Fi credentials or tokens
+.env
+.env.*
+secrets.h
+credentials.h
