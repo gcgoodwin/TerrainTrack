@@ -1,0 +1,149 @@
+<mxfile host="app.diagrams.net" agent="manual-style engineering draft" pages="2">
+  <diagram name="1 — Signal Wiring" id="rN7vXz9NetUphnK9FjnZ">
+    <mxGraphModel dx="2076" dy="1495" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1285" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="signal_title" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;fontColor=#333333;fontFamily=Helvetica;fontSize=25;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="TERRAINTRACK- Wiring" vertex="1">
+          <mxGeometry height="90" width="1510" x="45" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="mac" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#EAF3FF;strokeColor=#386DB0;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="MACBOOK  •  PYTHON&#xa;OpenCV person detection&#xa;HTTP /capture, /status, /control&#xa;Sends speed, steer, pan, tilt" vertex="1">
+          <mxGeometry height="158" width="340" x="60" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="esp" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#E7F7F3;strokeColor=#16846C;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="ESP32-S3  •  CAMERA + WIFI&#xa;Camera GPIO map: board-specific, UNVERIFIED&#xa;Uno UART: GPIO41 RX / GPIO42 TX&#xa;LiDAR UART: GPIO1 RX / GPIO2 TX&#xa;Both UART links: 115200 baud" vertex="1">
+          <mxGeometry height="219" width="460" x="545" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="lidar" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#E7F7F3;strokeColor=#16846C;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="TFS20-L  •  3.3 V ONLY&#xa;Pin 1 + Pin 2: regulated +3.3V&#xa;Pin 3 TX  →  ESP32 GPIO1 RX&#xa;Pin 4 RX  ←  ESP32 GPIO2 TX&#xa;Pin 5 GND: selects UART mode&#xa;Pin 6: GND" vertex="1">
+          <mxGeometry height="220" width="386" x="1160" y="166" as="geometry" />
+        </mxCell>
+        <mxCell id="bts" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#FFF4DC;strokeColor=#D69423;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="BTS7960  •  H-BRIDGE&#xa;RPWM ← Uno D5&#xa;LPWM ← Uno D6&#xa;R_EN ← Uno D7&#xa;L_EN ← Uno D8&#xa;VCC: +5V; motor supply: VBAT" vertex="1">
+          <mxGeometry height="190" width="370" x="60" y="565" as="geometry" />
+        </mxCell>
+        <mxCell id="uno" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#EAF3FF;strokeColor=#386DB0;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="ARDUINO UNO R3  •  CONTROL&#xa;Serial: D0 RX ← ESP GPIO42 TX&#xa;Serial: D1 TX → ESP GPIO41 RX*&#xa;Drive: D5, D6, D7, D8&#xa;Servos: D9 steer / D10 pan / D11 tilt&#xa;Encoder inputs: D2 left / D3 right&#xa;IMU I²C: A4 SDA / A5 SCL" vertex="1">
+          <mxGeometry height="273" width="460" x="545" y="536" as="geometry" />
+        </mxCell>
+        <mxCell id="servos" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#FFF4DC;strokeColor=#D69423;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="SERVOS  •  5 V RAIL&#xa;Steering signal  ←  Uno D9&#xa;Gimbal pan signal  ←  Uno D10&#xa;Gimbal tilt signal  ←  Uno D11&#xa;All V+: regulated 5V; all GND: common&#xa;Confirm servo current and mechanical travel" vertex="1">
+          <mxGeometry height="204" width="435" x="1112" y="548" as="geometry" />
+        </mxCell>
+        <mxCell id="motor" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F2F5F8;strokeColor=#708399;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="BRUSHED DRIVE MOTOR&#xa;BTS7960 M+ / M−  →  motor leads&#xa;Battery 7.4 V nominal, 8.4 V fully charged" vertex="1">
+          <mxGeometry height="116" width="365" x="65" y="857" as="geometry" />
+        </mxCell>
+        <mxCell id="imu" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#E7F7F3;strokeColor=#16846C;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="MPU-6050  •  IMU (0x68)&#xa;Uno A4 SDA / A5 SCL via 5V↔3.3V I²C shifter&#xa;Sensor VCC: 3.3 V (if breakout supports)&#xa;GND common; verify module and pull-ups" vertex="1">
+          <mxGeometry height="160" width="455" x="520" y="896" as="geometry" />
+        </mxCell>
+        <mxCell id="encoder" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#E7F7F3;strokeColor=#16846C;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="WHEEL ENCODER INPUTS&#xa;Encoder left OUT  →  Uno D2&#xa;Encoder right OUT  →  Uno D3&#xa;Supply / pull-ups per actual encoder board&#xa;Confirm 2 channels available and mounted" vertex="1">
+          <mxGeometry height="172" width="473" x="1065" y="861" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mac_esp" edge="1" parent="1" source="mac" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6F79B7;strokeWidth=2.8;endArrow=block;endFill=1;dashed=1;dashPattern=7 5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="esp" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_lidar_esp" edge="1" parent="1" source="lidar" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1D8A75;strokeWidth=2.8;endArrow=block;endFill=1;entryX=1;entryY=0.56;entryDx=0;entryDy=0;exitX=0;exitY=0.56;exitDx=0;exitDy=0;" target="esp" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_esp_uno" edge="1" parent="1" source="esp" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4277A9;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0.45;entryY=0;entryDx=0;entryDy=0;exitX=0.45;exitY=1;exitDx=0;exitDy=0;" target="uno" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_uno_bts" edge="1" parent="1" source="uno" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4277A9;strokeWidth=2.8;endArrow=block;endFill=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="bts" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_uno_servos" edge="1" parent="1" source="uno" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#4277A9;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="servos" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bts_motor" edge="1" parent="1" source="bts" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B76235;strokeWidth=2.8;endArrow=blockThin;endFill=1;entryX=0.35;entryY=0;entryDx=0;entryDy=0;exitX=0.35;exitY=1;exitDx=0;exitDy=0;" target="motor" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_uno_imu" edge="1" parent="1" source="uno" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1D8A75;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0.45;entryY=0;entryDx=0;entryDy=0;exitX=0.45;exitY=1;exitDx=0;exitDy=0;" target="imu" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_uno_enc" edge="1" parent="1" source="uno" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#1D8A75;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0.14;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.93;exitDx=0;exitDy=0;" target="encoder" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1030" y="790" />
+              <mxPoint x="1030" y="847" />
+              <mxPoint x="1135" y="847" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wifi_tag" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F2F5F8;strokeColor=#708399;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=14;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="Wi-Fi  /  HTTP" vertex="1">
+          <mxGeometry height="64" width="140" x="406" y="197" as="geometry" />
+        </mxCell>
+        <mxCell id="lidar_tag" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F2F5F8;strokeColor=#708399;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=14;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="UART&#xa;3.3V logic" vertex="1">
+          <mxGeometry height="74" width="126" x="1022" y="202" as="geometry" />
+        </mxCell>
+        <mxCell id="serial_tag" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F2F5F8;strokeColor=#708399;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=14;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="UART 115200&#xa;5V TX → 3.3V RX" vertex="1">
+          <mxGeometry height="74" width="225" x="744" y="415" as="geometry" />
+        </mxCell>
+        <mxCell id="bts_tag" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F2F5F8;strokeColor=#708399;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=13;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="PWM +&#xa;enables" vertex="1">
+          <mxGeometry height="65" width="108" x="437" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="servo_tag" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F2F5F8;strokeColor=#708399;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=14;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="PWM" vertex="1">
+          <mxGeometry height="54" width="97" x="1012" y="606" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2 — Power and Checks" id="lcqz8TLfxRyGPRkupkrz">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1600" pageHeight="1285" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="power_title" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#17324D;strokeColor=#17324D;strokeWidth=2;fontColor=#FFFFFF;fontFamily=Helvetica;fontSize=25;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="TERRAINTRACK  /  POWER + PROTECTION&#xa;Power distribution aligned to the current BOM • regulated voltage and peak current NOT verified" vertex="1">
+          <mxGeometry height="90" width="1510" x="45" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="battery" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#FFF4DC;strokeColor=#D69423;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="2S RC BATTERY&#xa;7.4 V nominal / 8.4 V full&#xa;+ battery → fuse → switch&#xa;− battery → COMMON GND&#xa;Connector polarity must be verified" vertex="1">
+          <mxGeometry height="176" width="350" x="62" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="protection" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#FFF0EC;strokeColor=#B85B46;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="FUSE + SWITCH&#xa;Place fuse near battery +&#xa;Choose fuse &amp; wire rating from&#xa;measured current (not yet tested)" vertex="1">
+          <mxGeometry height="145" width="260" x="473" y="213" as="geometry" />
+        </mxCell>
+        <mxCell id="vbat" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F2F5F8;strokeColor=#708399;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="SWITCHED VBAT BUS&#xa;VBAT_SW = switched battery +&#xa;GND = common battery return&#xa;Parallel supply branches" vertex="1">
+          <mxGeometry height="146" width="304" x="796" y="211" as="geometry" />
+        </mxCell>
+        <mxCell id="motor_supply" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#FFF4DC;strokeColor=#D69423;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="BTS7960 MOTOR POWER&#xa;B+ ← VBAT_SW&#xa;B− ← COMMON GND&#xa;M+ / M− → brushed motor&#xa;Verify driver and motor stall current" vertex="1">
+          <mxGeometry height="157" width="360" x="1173" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="reg5" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#EAF3FF;strokeColor=#386DB0;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="5 V REGULATOR / UBEC&#xa;Input: VBAT_SW / GND&#xa;Output: +5V / common GND&#xa;Single regulator listed in BOM&#xa;Servo + logic peak load: CHECK FIRST" vertex="1">
+          <mxGeometry height="165" width="451" x="219" y="556" as="geometry" />
+        </mxCell>
+        <mxCell id="reg33" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#E7F7F3;strokeColor=#16846C;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="3.3 V REGULATOR&#xa;Input: VBAT_SW / GND&#xa;Output: +3.3V / common GND&#xa;Adjust / measure output BEFORE LiDAR&#xa;Never power TFS20-L with 5 V" vertex="1">
+          <mxGeometry height="166" width="440" x="886" y="556" as="geometry" />
+        </mxCell>
+        <mxCell id="users5" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#EAF3FF;strokeColor=#386DB0;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="5 V CONSUMERS  •  CHECK CAPACITY&#xa;Arduino Uno regulated +5V input; BTS7960 VCC&#xa;Steering/pan/tilt servos (high current spikes)&#xa;ESP32 board: ONLY through supported 5 V/VBUS input&#xa;Do NOT tie two separate buck + outputs together" vertex="1">
+          <mxGeometry height="165" width="585" x="99" y="855" as="geometry" />
+        </mxCell>
+        <mxCell id="users33" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#E7F7F3;strokeColor=#16846C;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="3.3 V CONSUMERS / LOGIC&#xa;TFS20-L: pins 1 + 2 → +3.3 V; pin 6 → GND&#xa;MPU-6050: verify breakout VCC &amp; I²C level requirements&#xa;UART level shift on Uno TX 5 V → ESP32 RX 3.3 V&#xa;LiDAR TX/RX direct to ESP32 3.3 V UART" vertex="1">
+          <mxGeometry height="165" width="599" x="900" y="855" as="geometry" />
+        </mxCell>
+        <mxCell id="common" parent="1" style="rounded=1;arcSize=10;whiteSpace=wrap;html=0;fillColor=#F2F5F8;strokeColor=#708399;strokeWidth=2;fontColor=#1F3445;fontFamily=Helvetica;fontSize=15;align=left;verticalAlign=middle;spacingLeft=18;spacingRight=10;spacingTop=8;spacingBottom=7;" value="COMMON GROUND  /  CONNECTION CHECKS&#xa;Battery −, Arduino GND, ESP32 GND, both regulators GND, BTS7960 GND, servos GND, sensors GND must share reference.&#xa;Avoid powering Uno 5 V pin and USB at the same time without assessing backfeed. Add bulk capacitor close to servos; validate actual load and wiring." vertex="1">
+          <mxGeometry height="119" width="1460" x="75" y="1109" as="geometry" />
+        </mxCell>
+        <mxCell id="e_batt_fuse" edge="1" parent="1" source="battery" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B76235;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0;entryY=0.44;entryDx=0;entryDy=0;exitX=1;exitY=0.44;exitDx=0;exitDy=0;" target="protection" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_fuse_bus" edge="1" parent="1" source="protection" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B76235;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0;entryY=0.45;entryDx=0;entryDy=0;exitX=1;exitY=0.45;exitDx=0;exitDy=0;" target="vbat" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bus_bts" edge="1" parent="1" source="vbat" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B76235;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="motor_supply" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_bus_5v" edge="1" parent="1" source="vbat" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B76235;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0.8;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="reg5" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="875" y="430" />
+              <mxPoint x="575" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_bus_33" edge="1" parent="1" source="vbat" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B76235;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0.45;entryY=0;entryDx=0;entryDy=0;exitX=0.7;exitY=1;exitDx=0;exitDy=0;" target="reg33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_5v_users" edge="1" parent="1" source="reg5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B76235;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="users5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_33_users" edge="1" parent="1" source="reg33" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B76235;strokeWidth=2.8;endArrow=block;endFill=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="users33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
