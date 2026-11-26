@@ -28,10 +28,9 @@ The parts list comes to **$124 before shipping and tax**. That assumes I reuse t
 
 ## Timeline
 
-1. **Steering and drive.** First, I need to test if the car can drive. With the wheels lifted, command left, center, and right, then check whether the steering can repeat those positions with the car on the ground.
-2. **Tracking with the car parked.** To do this, the car will be parked and I will Wwalk across the camera’s view and see whether the gimbal follows smoothly using the 2 servos. If I ever step out of the 180 deg FOV, I expect it to produce an error messege.
-3. **Following on flat ground.** To trst this, I will walk slowly, turn, then stop. I want to see whether the chassis will drive to catch up with the camera’s heading and whether the car can hold its distance without repeatedly starting and stopping.
-4. **Scanning a curb.** I will park the car near a curb and sweep the LiDAR across it. Each reading gives one distance, so the sensor will pan radar style and create a stationary 3D scan.
+1. **Tracking with the car parked.** To do this, the car will be parked and I will Wwalk across the camera’s view and see whether the gimbal follows smoothly using the 2 servos. If I ever step out of the 180 deg FOV, I expect it to produce an error messege.
+2. **Following on flat ground.** To trst this, I will walk slowly, turn, then stop. I want to see whether the chassis will drive to catch up with the camera’s heading and whether the car can hold its distance without repeatedly starting and stopping.
+3. **Scanning a curb.** I will park the car near a curb and sweep the LiDAR across it. Each reading gives one distance, so the sensor will pan radar style and create a stationary 3D scan.
 
 A limitation I’ll need to test is that the LiDAR moves with the camera. When the camera turns to follow someone beside the car, the sensor also turns away from the path in front of the wheels. This may not be a problem at longer ranges,but at shorter rages it could be bad so i might need to consider having 2 gimbles!
 
