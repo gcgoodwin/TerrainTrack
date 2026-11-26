@@ -48,7 +48,7 @@ https://github.com/gcgoodwin/TerrainTrack/blob/main/electronics/TERRAINTRACK_Wir
 | Component | Quantity | Unit Price (USD) | Line Total (USD) | Product Link | Status | Notes |
 |---|---|---|---|---|---|---|
 | ESP32 camera board with PSRAM | 1 | 17 | 17 | https://www.amazon.com/dp/B0GLWRBPJ4 | To purchase | Wi-Fi camera for MacBook vision processing |
-| DFRobot TFS20-L ToF LiDAR | 1 | 44 | 44 | TFS20-L ToF LiDAR Sensor (20m, I2C/UART, 250Hz) - DFRobot | To purchase | Range measurements to create 3D scan |
+| DFRobot TFS20-L ToF LiDAR | 1 | 44 | 44 | [TFS20-L ToF LiDAR Sensor (20m, I2C/UART, 250Hz) - DFRobot](https://www.dfrobot.com/product-2951.html) | To purchase | Range measurements to create 3D scan |
 | Micro servos (pan and tilt) | 2 | 5 | 10 | https://www.amazon.com/dp/B0CNL755KP | To purchase | Two units, $10 total |
 | BTS7960 drive motor driver | 1 | 11 | 11 | https://www.amazon.com/dp/B00WSN98DC | To purchase | Rear brushed motor control |
 | 5 V voltage regulator | 1 | 10 | 10 | https://www.amazon.com/dp/B0CQ1R55BV | To purchase | Regulated electronics/servo power |
