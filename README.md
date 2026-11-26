@@ -38,3 +38,29 @@ A limitation I’ll need to test is that the LiDAR moves with the camera. When t
 ## Current progress
 
 I have a CAD layout, a rough wiring diagram, a bill of materials, and reference firmware/code to work from. The first checkpoint I’m working on is simple enough to judge by watching it once: I will walk past the parked car, the camera follows me, and the wheels stay still the whole time.
+
+
+## Bill of Materials (BOM)
+
+| Component | Quantity | Unit Price (USD) | Line Total (USD) | Product Link | Status | Notes |
+|---|---|---|---|---|---|---|
+| ESP32 camera board with PSRAM | 1 | 17 | 17 | https://www.amazon.com/dp/B0GLWRBPJ4 | To purchase | Wi-Fi camera for MacBook vision processing |
+| DFRobot TFS20-L ToF LiDAR | 1 | 44 | 44 | TFS20-L ToF LiDAR Sensor (20m, I2C/UART, 250Hz) - DFRobot | To purchase | Range measurements to create 3D scan |
+| Micro servos (pan and tilt) | 2 | 5 | 10 | https://www.amazon.com/dp/B0CNL755KP | To purchase | Two units, $10 total |
+| BTS7960 drive motor driver | 1 | 11 | 11 | https://www.amazon.com/dp/B00WSN98DC | To purchase | Rear brushed motor control |
+| 5 V voltage regulator | 1 | 10 | 10 | https://www.amazon.com/dp/B0CQ1R55BV | To purchase | Regulated electronics/servo power |
+| MPU-6050 IMU | 1 | 7 | 7 | https://www.amazon.com/dp/B01DK83ZYQ | To purchase | Inertial measurements |
+| 3.3 V voltage regulator | 1 | 9 | 9 | https://www.amazon.com/dp/B0BVFYXPQ8 | To purchase | LiDAR power regulator to 3.3V |
+| Wheel encoder kit | 1 | 16 | 16 | https://www.amazon.com/dp/B07JQQYQTF | To purchase | Wheel rotation / odometry |
+| RC car chassis, drivetrain and suspension | 1 | 0 | 0 | | Already owned | |
+| Arduino Uno R3 | 1 | 0 | 0 | | Already owned | Main motor/sensor controller |
+| 7.4 V battery | 1 | 0 | 0 | | Already owned | Power source |
+| MacBook | 1 | 0 | 0 | | Already owned | Vision processing |
+| 3D-printed brackets and mounts | 1 | 0 | 0 | | Free | |
+| Wires, connectors, screws | 1 | 0 | 0 | | Already owned | |
+| PARTS SUBTOTAL | | | 124 | | | |
+| Shipping | | | 0 | | Verify at checkout | 10% |
+| Tax | | | 12.4 | | Verify at checkout | |
+| Total | | | 136.4 | | | |
+
+
