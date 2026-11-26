@@ -2,7 +2,7 @@ Part,Qty,Estimated unit price USD,Estimated total USD,Status,Phase,Specification
 ESP32-S3 camera board + PSRAM,1,17,17,To fund,Vision,Exact ESP32 board/PSRAM/lens mounting dimensions pending,https://www.amazon.com/dp/B0GLWRBPJ4,Amazon
 DFRobot TFS20-L LiDAR,1,44,44,To fund,Scanning,Single-point ToF; 3.3V; UART/I2C; 21x15x7.87mm,https://www.dfrobot.com/product-2951.html,DFRobot
 Pan and tilt micro servos,2,5,10,To fund,Gimbal,Micro servo pair; torque and voltage TBD,https://www.amazon.com/dp/B0CNL755KP,Amazon
-Bidirectional brushed motor driver,1,25,25,To fund,Motion,Must handle motor stall current; exact SKU TBD,,https://www.amazon.com/dp/B00WSN98DC?lv=shuf&utm_source=chatgpt.com&channelId=480&plpRedirect=mhFallback&th=1
+Bidirectional brushed motor driver,1,25,25,To fund,Motion,Must handle motor stall current; exact SKU https://www.amazon.com/dp/B00WSN98DC?lv=shuf&utm_source=chatgpt.com&channelId=480&plpRedirect=mhFallback&th=1,,Amazon
 Voltage regulator + filter,1,15,15,To fund,Power,Battery 7.4V; 5V/3.3V rails; current capacities TBD,,https://www.amazon.com/dp/B0CQ1R55BV?lv=shuf&utm_source=chatgpt.com&channelId=480&plpRedirect=mhFallback
 IMU + wheel sensing parts,1,20,20,To fund,Navigation,IMU and wheel encoders; fit and exact models TBD,,https://www.amazon.com/dp/B01DK83ZYQ?lv=shuf&utm_source=chatgpt.com&channelId=480&plpRedirect=mhFallback&th=1
 "3D prints, hardware, connectors",1,15,15,Existing,Gimbal,"CAD-designed mount, screw fittings, wiring protection",,3D Printer
