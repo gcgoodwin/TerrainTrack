@@ -1,0 +1,242 @@
+<mxfile host="app.diagrams.net" agent="manual-style engineering draft">
+  <diagram id="terraintrack-r01" name="TerrainTrack Reference">
+    <mxGraphModel dx="2100" dy="4189" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1900" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="EX7KF1TvFtxhT3elUchb-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#999999;strokeColor=#243548;fontColor=#FFFFFF;fontStyle=1;fontSize=15;" value="TERRAINTRACK  /  WIRING&amp;nbsp;" vertex="1">
+          <mxGeometry height="85.53" width="2018.57" x="80" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#4D4D4D;strokeColor=#243548;fontColor=#FFFFFF;fontStyle=1;fontSize=15;" value="01  POWER DISTRIBUTION" vertex="1">
+          <mxGeometry height="60.58" width="1468.05" x="80" y="120.37" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;2S RC battery&lt;/b&gt;&lt;br&gt;7.4 V nominal / 8.4 V full&lt;br&gt;B+ / B−" vertex="1">
+          <mxGeometry height="178.19" width="288.37" x="80" y="245.1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;Fuse + power switch&lt;/b&gt;&lt;br&gt;Series in positive lead&lt;br&gt;Size to measured load" vertex="1">
+          <mxGeometry height="178.19" width="275.26" x="420.8" y="245.1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;Battery distribution&lt;/b&gt;&lt;br&gt;VBAT_SW / GND&lt;br&gt;Parallel branches" vertex="1">
+          <mxGeometry height="178.19" width="301.47" x="761.6" y="245.1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;BTS7960 / IBT-2&lt;/b&gt;&lt;br&gt;B+ = VBAT_SW; B− = GND&lt;br&gt;VCC = +5V; GND&lt;br&gt;RPWM, LPWM, R_EN, L_EN" vertex="1">
+          <mxGeometry height="213.83" width="367.01" x="1181.04" y="200.56" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;5 V UBEC&lt;/b&gt;&lt;br&gt;IN = VBAT_SW / GND&lt;br&gt;OUT = +5V / GND&lt;br&gt;Peak capacity: verify" vertex="1">
+          <mxGeometry height="187.1" width="367.01" x="1181.04" y="450.02" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;Mini360 3.3 V buck&lt;/b&gt;&lt;br&gt;IN = VBAT_SW / GND&lt;br&gt;OUT = +3V3 / GND&lt;br&gt;Verify output before use" vertex="1">
+          <mxGeometry height="178.19" width="301.47" x="761.6" y="476.75" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-10" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B44D30;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-11" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B44D30;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-12" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B44D30;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1;exitY=0.35;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1115.5" y="307.47" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-13" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B44D30;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1135.16" y="378.75" />
+              <mxPoint x="1135.16" y="543.57" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-14" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B44D30;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=14;" value="&lt;b&gt;Named power nets&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#B44D30&quot;&gt;VBAT_SW&lt;/font&gt; = switched battery positive&lt;br&gt;&lt;font color=&quot;#287A4B&quot;&gt;+5V&lt;/font&gt; = UBEC output&lt;br&gt;&lt;font color=&quot;#2365A7&quot;&gt;+3V3&lt;/font&gt; = Mini360 output&lt;br&gt;GND = common battery return" vertex="1">
+          <mxGeometry height="196.01" width="616.06" x="80" y="458.93" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#1A1A1A;strokeColor=#243548;fontColor=#FFFFFF;fontStyle=1;fontSize=15;" value="02  CONTROL AND SENSOR CONNECTIONS" vertex="1">
+          <mxGeometry height="60.58" width="1468.05" x="80" y="699.49" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;Rear drive motor&lt;/b&gt;&lt;br&gt;M+ / M− from BTS7960&lt;br&gt;Stall current: verify" vertex="1">
+          <mxGeometry height="160.37" width="327.69" x="80" y="797.5" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;BTS7960 (control)&lt;/b&gt;&lt;br&gt;RPWM / LPWM / R_EN + L_EN&lt;br&gt;VCC +5V; GND; B+ VBAT_SW&lt;br&gt;Motor output: M+ / M−" vertex="1">
+          <mxGeometry height="160.37" width="419.44" x="473.23" y="797.5" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-19" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#364152;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=none;strokeColor=none;fontColor=#364152;fontSize=13;spacingLeft=2;align=center;" value="M+ / M−" vertex="1">
+          <mxGeometry height="42.77" width="65.54" x="407.69" y="824.22" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;Steering / pan / tilt&lt;/b&gt;&lt;br&gt;3-wire servos, external +5V*&lt;br&gt;Signal: D4 / D9 / D10&lt;br&gt;Common GND" vertex="1">
+          <mxGeometry height="196.01" width="327.69" x="80" y="1046.96" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;Wheel encoders ×2&lt;/b&gt;&lt;br&gt;SparkFun ROB-12629&lt;br&gt;Supply +5V; GND&lt;br&gt;OUT L/R → D2/D3; verify pull-ups" vertex="1">
+          <mxGeometry height="196.01" width="327.69" x="80" y="1340.98" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#EAF2FA;strokeColor=#2365A7;" value="&lt;b&gt;Arduino Uno R3&lt;/b&gt;&lt;br&gt;D2/D3  encoder inputs&lt;br&gt;D4/D9/D10  servo outputs&lt;br&gt;D5/D6/D12  motor driver&lt;br&gt;A4/A5  I²C; D7/D8  serial&lt;br&gt;+5V* / common GND" vertex="1">
+          <mxGeometry height="302.92" width="419.44" x="473.23" y="1064.78" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-24" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#364152;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=none;strokeColor=none;fontColor=#364152;fontSize=13;spacingLeft=2;align=center;" value="D5 / D6 / D12" vertex="1">
+          <mxGeometry height="42.77" width="183.51" x="643.4399999999999" y="989.94" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-26" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#364152;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0;exitY=0.265;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=none;strokeColor=none;fontColor=#364152;fontSize=13;spacingLeft=2;align=center;" value="D4/9/10" vertex="1">
+          <mxGeometry height="42.77" width="65.54" x="407.69" y="1100.42" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-28" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#364152;strokeWidth=2;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.8;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440.46" y="1438.98" />
+              <mxPoint x="440.46" y="1307.12" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-29" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=none;strokeColor=none;fontColor=#364152;fontSize=13;spacingLeft=2;align=center;" value="D2/3" vertex="1">
+          <mxGeometry height="42.77" width="65.54" x="407.69" y="1392.65" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-30" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;I²C level shifter&lt;/b&gt;&lt;br&gt;HV +5V; LV +3V3; GND&lt;br&gt;HV SDA/SCL = A4/A5&lt;br&gt;LV SDA/SCL = sensor bus" vertex="1">
+          <mxGeometry height="196.01" width="268.71" x="984.42" y="1029.14" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-31" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;GY-521 MPU-6050&lt;/b&gt;&lt;br&gt;SDA/SCL: LV bus&lt;br&gt;VCC per breakout; GND&lt;br&gt;Verify pull-ups / logic" vertex="1">
+          <mxGeometry height="187.1" width="242.49" x="1305.56" y="797.5" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;TFS20-L LiDAR&lt;/b&gt;&lt;br&gt;1,2: +3V3; 6: GND&lt;br&gt;3: SDA; 4: SCL&lt;br&gt;5: NC (I²C mode)" vertex="1">
+          <mxGeometry height="196.01" width="242.49" x="1305.56" y="1082.6" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-33" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#364152;strokeWidth=2;endArrow=block;endFill=1;startArrow=block;startFill=1;exitX=1;exitY=0.2353;exitDx=0;exitDy=0;entryX=0;entryY=0.55;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=none;strokeColor=none;fontColor=#364152;fontSize=13;spacingLeft=2;align=center;" value="A4/A5" vertex="1">
+          <mxGeometry height="42.77" width="91.75" x="892.67" y="1082.6" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-35" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#364152;strokeWidth=2;endArrow=block;endFill=1;startArrow=block;startFill=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1279.35" y="1078.15" />
+              <mxPoint x="1279.35" y="891.05" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-36" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#364152;strokeWidth=2;endArrow=block;endFill=1;startArrow=block;startFill=1;exitX=1;exitY=0.77;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;UART level translator&lt;/b&gt;&lt;br&gt;HV +5V; LV +3V3; GND&lt;br&gt;D8 TX → ESP RX&lt;br&gt;D7 RX ← ESP TX" vertex="1">
+          <mxGeometry height="196.01" width="419.44" x="473.23" y="1465.71" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;ESP32-S3 camera&lt;/b&gt;&lt;br&gt;UART GPIO: board-specific&lt;br&gt;Power input: verify board&lt;br&gt;Common GND" vertex="1">
+          <mxGeometry height="196.01" width="268.71" x="984.42" y="1465.71" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-39" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#64748B;" value="&lt;b&gt;MacBook&lt;/b&gt;&lt;br&gt;Video / commands&lt;br&gt;Vision + navigation" vertex="1">
+          <mxGeometry height="196.01" width="242.49" x="1305.56" y="1465.71" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-40" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#364152;strokeWidth=2;endArrow=block;endFill=1;startArrow=block;startFill=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-41" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=none;strokeColor=none;fontColor=#364152;fontSize=13;spacingLeft=2;align=center;" value="D7 / D8" vertex="1">
+          <mxGeometry height="42.77" width="170.4" x="650" y="1395" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-42" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#364152;strokeWidth=2;endArrow=block;endFill=1;startArrow=block;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EX7KF1TvFtxhT3elUchb-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-43" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=none;strokeColor=none;fontColor=#364152;fontSize=13;spacingLeft=2;align=center;" value="UART" vertex="1">
+          <mxGeometry height="42.77" width="91.75" x="892.67" y="1520.95" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-44" edge="1" parent="1" source="EX7KF1TvFtxhT3elUchb-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#287A4B;strokeWidth=2;endArrow=block;endFill=1;startArrow=block;startFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" target="EX7KF1TvFtxhT3elUchb-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=none;strokeColor=none;fontColor=#364152;fontSize=13;spacingLeft=2;align=center;" value="Wi-Fi" vertex="1">
+          <mxGeometry height="42.77" width="52.43" x="1253.13" y="1520.95" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-46" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#666666;strokeColor=#243548;fontColor=#FFFFFF;fontStyle=1;fontSize=15;" value="ARDUINO UNO R3  /  PORTS" vertex="1">
+          <mxGeometry height="60.58" width="511.2" x="1587.37" y="120.37" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D2&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="180.96" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="Left encoder input" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="180.96" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-49" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D3&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="230.85" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-50" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="Right encoder input" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="230.85" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D4&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="280.74" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-52" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="Steering servo signal" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="280.74" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-53" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D5&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="330.64" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-54" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="BTS7960 RPWM" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="330.64" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-55" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D6&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="380.53" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-56" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="BTS7960 LPWM" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="380.53" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-57" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D7&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="430.42" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-58" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="Software UART RX from ESP32" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="430.42" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-59" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D8&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="480.32" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-60" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="Software UART TX to ESP32" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="480.32" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-61" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D9&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="530.21" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-62" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="Pan servo signal" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="530.21" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-63" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D10&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="580.1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-64" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="Tilt servo signal" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="580.1" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-65" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;D12&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-66" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="R_EN + L_EN (both driver enables)" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-67" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;A4&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="679.89" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-68" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#F6F8FA;strokeColor=#CBD5E1;fontSize=13;" value="I²C SDA, high-voltage side" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="679.89" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-69" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="&lt;b&gt;A5&lt;/b&gt;" vertex="1">
+          <mxGeometry height="49.89" width="85.2" x="1587.37" y="729.78" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-70" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=13;" value="I²C SCL, high-voltage side" vertex="1">
+          <mxGeometry height="49.89" width="426" x="1672.57" y="729.78" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-71" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#333333;strokeColor=#243548;fontColor=#FFFFFF;fontStyle=1;fontSize=15;" value="NETS AND SIGNALS" vertex="1">
+          <mxGeometry height="60.58" width="511.2" x="1587.37" y="815.32" as="geometry" />
+        </mxCell>
+        <mxCell id="EX7KF1TvFtxhT3elUchb-72" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Arial;fontSize=15;align=left;verticalAlign=middle;spacingLeft=12;strokeWidth=1.2;fillColor=#FFFFFF;strokeColor=#CBD5E1;fontSize=14;" value="&lt;font color=&quot;#B44D30&quot;&gt;&lt;b&gt;Red&lt;/b&gt;&lt;/font&gt; — switched battery supply&lt;br&gt;&lt;font color=&quot;#287A4B&quot;&gt;&lt;b&gt;+5V&lt;/b&gt;&lt;/font&gt; — regulated 5 V rail&lt;br&gt;&lt;font color=&quot;#2365A7&quot;&gt;&lt;b&gt;+3V3&lt;/b&gt;&lt;/font&gt; — regulated 3.3 V rail&lt;br&gt;&lt;b&gt;Dark connectors&lt;/b&gt; — signal or motor wires&lt;br&gt;&lt;b&gt;Dashed connector&lt;/b&gt; — wireless link&lt;br&gt;Identically named supply nets join in parallel." vertex="1">
+          <mxGeometry height="270.85" width="511.2" x="1587.37" y="875.9" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
