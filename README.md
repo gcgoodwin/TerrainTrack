@@ -36,7 +36,10 @@ A limitation I’ll need to test is that the LiDAR moves with the camera. When t
 
 ## Current progress
 
-I have a CAD layout, a rough wiring diagram, a bill of materials, and reference firmware/code to work from. The first checkpoint I’m working on is simple enough to judge by watching it once: I will walk past the parked car, the camera follows me, and the wheels stay still the whole time.
+I have a CAD layout, a rough wiring diagram, a bill of materials, and reference firmware/code to work from. The first checkpoint I’m working on is simple enough to judge by watching it once: I will walk past the parked car, the camera follows me, and the wheels stay still the whole time. This is the planned wiring and power distribution of the entire system: 
+
+<img width="916" height="694" alt="Wiring" src="https://github.com/user-attachments/assets/1f44c556-e17a-4ec4-8172-a39b3e5823f4" />
+
 
 
 ## Bill of Materials (BOM)
