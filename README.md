@@ -3,12 +3,12 @@
 TerrainTrack is my project for an autonomous vehicle with obstacle aware tracking capabilities. This vehicle will aim to achieve this by mounting a camera and a LIDAR distance sensor on a modified remote control car that can drive autonomously. In this way, the vehicle will rely on this 3D scan of its surroundings to autonomously traverse through uneven terrain so that it can track and follow targets. I am building this because most simple robots with tracking capabilities can track a person/ moving object, but they don't necessarily understand whether the ground between them and that person is actually traversable. For example, someone walking down a sidewalk and stepping onto the road through a driveway ramp. A basic following robot might simply drive toward them, encounter a curb, and get stuck and get damaged. TerrainTrack aims to solve this problem by using cheap sensors to create a a 3D scan of its surroundings so that it can actively and autonomously plot courses that are terrain aware and traversable.
 
 I’ve been working through the physical layout in Fusion 360. The 2 axis gimble mount needs to hold both the camera and the LIDAR range sensor. After finializing the sensors I am using, I designed the entire project in Fusion 360 CAD to simulate how individual parts would fit together. 
+<img width="1546" height="1116" alt="IMG_4036" src="https://github.com/user-attachments/assets/b93e790b-6f79-49ec-9000-92ce2fa15e42" />
 
-![alt text](IMG_4036.png)
+
 
 The gimble mount by itself:
-
-![alt text](IMG_1560.png)
+<img width="968" height="1150" alt="IMG_1560" src="https://github.com/user-attachments/assets/daf0753b-f3dd-4154-903f-e2d2ea96345e" />
 
 ## How I want it to follow someone
 
