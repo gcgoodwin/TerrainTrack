@@ -1,2 +1,40 @@
 # TerrainTrack
-This is an autonomous RC rover featuring computer vision based person tracking, a custom two axis camera/LiDAR gimbal, 3D terrain scanning, and obstacle aware navigation.
+
+TerrainTrack is my project for an autonomous vehicle with obstacle aware tracking capabilities. This vehicle will aim to achieve this by mounting a camera and a LIDAR distance sensor on a modified remote control car that can drive autonomously. In this way, the vehicle will rely on this 3D scan of its surroundings to autonomously traverse through uneven terrain so that it can track and follow targets. I am building this because most simple robots with tracking capabilities can track a person/ moving object, but they don't necessarily understand whether the ground between them and that person is actually traversable. For example, someone walking down a sidewalk and stepping onto the road through a driveway ramp. A basic following robot might simply drive toward them, encounter a curb, and get stuck and get damaged. TerrainTrack aims to solve this problem by using cheap sensors to create a a 3D scan of its surroundings so that it can actively and autonomously plot courses that are terrain aware and traversable.
+
+I’ve been working through the physical layout in Fusion 360. The 2 axis gimble mount needs to hold both the camera and the LIDAR range sensor. After finializing the sensors I am using, I designed the entire project in Fusion 360 CAD to simulate how individual parts would fit together. 
+
+![alt text](IMG_4036.png)
+
+The gimble mount by itself:
+
+![alt text](IMG_1560.png)
+
+## How I want it to follow someone
+
+The plan is to stream video over Wi-Fi from an ESP32 camera board to my MacBook.Once a person is selected in the video, my MacBook will determine the location of that person across the video. As the person moves left across the video, the pan servo can be used to pan the camera to follow the person. Commands to the motor and servos on the vehicle will be sent by an Arduino Uno R3.
+
+I should also mention gimbal orientation. If I am standing next to the vehicle, I can have the gimbal rotate so that I am in the center of the frame and the steering wheels would still be facing straight ahead. The steering system will then aquire my location in the frame as well as the pan angle in order to determine a turn direction.
+
+| Part | What I plan to use it for |
+| --- | --- |
+| Two micro servos | Pan the camera and LiDAR together and tilt them toward the ground for a scan. |
+| DFRobot TFS20-L LiDAR | Measure distance along the direction the sensor is pointing. |
+| BTS7960 motor driver | Let the Arduino control the rear brushed drive motor. |
+| Wheel encoder and MPU-6050 | Estimate how far the chassis has traveled and how it moves between readings. The encoder still needs a mounting solution that fits the donor car. |
+| Existing 7.4 V battery and voltage regulators | Power the drivetrain and supply the electronics at their required voltages. |
+
+The parts list comes to **$124 before shipping and tax**. That assumes I reuse the chassis, battery, Arduino, and MacBook and have access to free 3D printing.
+
+## Timeline
+
+1. **Steering and drive.** First, I need to test if the car can drive. With the wheels lifted, command left, center, and right, then check whether the steering can repeat those positions with the car on the ground.
+2. **Tracking with the car parked.** To do this, the car will be parked and I will Wwalk across the camera’s view and see whether the gimbal follows smoothly using the 2 servos. If I ever step out of the 180 deg FOV, I expect it to produce an error messege.
+3. **Following on flat ground.** To trst this, I will walk slowly, turn, then stop. I want to see whether the chassis will drive to catch up with the camera’s heading and whether the car can hold its distance without repeatedly starting and stopping.
+4. **Scanning a curb.** I will park the car near a curb and sweep the LiDAR across it. Each reading gives one distance, so the sensor will pan radar style and create a stationary 3D scan.
+
+A limitation I’ll need to test is that the LiDAR moves with the camera. When the camera turns to follow someone beside the car, the sensor also turns away from the path in front of the wheels. This may not be a problem at longer ranges,but at shorter rages it could be bad so i might need to consider having 2 gimbles!
+
+## Current progress
+
+I have a CAD layout, a rough wiring diagram, a bill of materials, and reference firmware/code to work from. The first checkpoint I’m working on is simple enough to judge by watching it once: I will walk past the parked car, the camera follows me, and the wheels stay still the whole time.
